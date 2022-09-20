@@ -1,1 +1,39 @@
+- For Python commands
+
 cd C:\Users\Abdal\Desktop\Python
+
+
+
+- For push commands
+
+$ git add .
+
+$ git commit -m "commit name"
+
+$ git push origin master
+
+$ git log
+
+
+
+
+- For pull commands
+
+$ git clone https://github/abdallahTalafha/...ect
+
+$ git pull origin master
+
+$ git reset --hard   (to delete all changes that has not been commited)
+
+
+
+- For new branch (if multiple users are working together)
+
+$ git branch (to know what branch are you working on)
+
+$ git checkout -b NewBranchName (to create a new branch)
+
+$ git push origin NewBranchName 
+
+
+
