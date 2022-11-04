@@ -4,6 +4,20 @@ cd C:\Users\Abdal\Desktop\Python
 
 
 
+** create empty repository :
+$ git init
+---------------------------------
+** set your name and email :
+$ git config --global user.name "your name"
+$ git config --global user.email "email@example.com"
+----------------------------------------------------
+** link your local repo. with github a repository : (only if you have an empty repository on github and you are the first one to add things to it)
+
+$ git remote add origin (link of your repository on github)
+
+----------------------------------------------------------
+
+
 - For push commands
 
 $ git add .
@@ -11,6 +25,8 @@ $ git add .
 $ git commit -m "commit name"
 
 $ git push origin master
+
+**master is the name of the branch
 
 $ git log
 
