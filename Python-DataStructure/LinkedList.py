@@ -10,6 +10,7 @@ class Node (object):
         return self.data
     def set_data (self, d):
         self.data = d
+
 class LinkedList(object):
     def __init__(self, r= None):
         self.root = r
@@ -43,6 +44,7 @@ class LinkedList(object):
             else:
                 this_node = this_node.get_next()
         return None
+  
 
 myList =LinkedList()
 myList.add(5)
