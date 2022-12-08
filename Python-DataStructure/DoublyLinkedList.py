@@ -43,7 +43,7 @@ class DoublyLinkedList(object):
         else:
             return False
 
-    def insertToHead(self,d):
+    def InsertToHead(self,d):
 
         if self.isEmpty():
             self.head=Node(d)
@@ -58,15 +58,34 @@ class DoublyLinkedList(object):
     
     def InsertToTail(self,d):
         if self.isEmpty():
-            self.insertToHead(d)
+            self.InsertToHead(d)
         else:
             new_node=Node(d,self.tail)
             new_node.next_node=None
-            self.tail.next_node =new_node
             new_node.prev_node =self.tail
-            
+            self.tail.next_node=new_node
+            self.tail=new_node
+        self.size+=1    
+    
+    def InsertToPos(self,pos,d):
+        if pos <1 or pos > self.size+1:
+            self.InsertToHead(d)
 
-       
+        elif pos==1:
+            self.InsertToHead(d)
+        elif pos==self.size+1:
+            self.InsertToTail
+        else:
+            temp =self.head
+            for i in range(1, pos-1):
+                temp = temp.next_node
+            new_node =Node(d)    
+            new_node.next_node=temp.next_node
+            new_node.prev_node =temp
+            temp.prev_node=new_node
+        self.size +=1    
+
+   
     def get_size(self):    
         return self.size
 
@@ -76,10 +95,10 @@ class DoublyLinkedList(object):
 
 def main():
     L1 = DoublyLinkedList()
-    L1.insertToHead(5)
-    L1.insertToHead(3)    
-    L1.insertToHead(6)
-    L1.insertToHead(12)
-    L1.insertToHead(45)
+    L1.InsertToHead(5)
+    L1.InsertToHead(3)    
+    L1.InsertToHead(6)
+    L1.InsertToHead(12)
+    L1.InsertToHead(45)
     print(L1.size)
 main()
